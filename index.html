@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<!-- angular app initialization-->
+<html ng-app="sampleApp">
+
+<head>
+  <meta charset="utf-8">
+  <!-- loading css styles  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+</head>
+
+<!-- Loading Home controller as default -->
+<body ng-controller="HomeController">
+
+  <nav class="navbar navbar-default">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#/">Sample Application</a>
+      </div>
+
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#/"><i class="fa fa-home"></i> Home</a></li>
+        <li><a href="#about"><i class="fa fa-shield"></i> About</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div id="main">
+
+    <!-- dynamic view will be injected here -->
+    <div ng-view></div>
+
+  </div>
+
+  <!--loading scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-route.min.js"></script>
+  <script src="app.js"></script>
+  <script src="routes/route.js"></script>
+  <script src="controller/HomeController.js"></script>
+  <script src="controller/AboutController.js"></script>
+</body>
+
+</html>
